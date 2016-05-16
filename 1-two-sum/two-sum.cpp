@@ -5,8 +5,9 @@ public:
         for (int i = 0; i < nums.size(); ++i) {
             int cand = target - nums[i];
             if (hash_map[cand] != 0) {
-                vector<int> ret {hash_map[cand] - 1, i};
-                return ret;
+                // vector<int> ret {hash_map[cand] - 1, i};
+                // return ret;
+                return {hash_map[cand] - 1, i};
             }
             hash_map[nums[i]] = i + 1;
         }
